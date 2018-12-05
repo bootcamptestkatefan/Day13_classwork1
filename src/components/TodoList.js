@@ -1,24 +1,24 @@
 import React, { Component } from 'react'
-import TodoInput from './TodoInput'
+import TodoInputContainer from '../containers/TodoInputContainer'
 import Todos from './Todos'
 import { connect } from "react-redux";
 
 class TodoList extends Component {
     state = {todos: []}
 
-    addNewTodo = newTodo => {
-      this.props.dispatch({
-        type: "ADD_NEW_TODO",
-        payload: newTodo
-      });
-    this.props.todos.push(newTodo)
-    //this.setState({todos: this.state.todos}) 
-    }
+    // addNewTodo = newTodo => {
+    //   this.props.dispatch({
+    //     type: "ADD_NEW_TODO",
+    //     payload: newTodo
+    //   });
+    // this.props.todos.push(newTodo)
+    // //this.setState({todos: this.state.todos}) 
+    // }
   render() {
     return (
       <div>
-        <TodoInput onNewTodoAdded={this.addNewTodo}/>
-        <Todos todos={this.props.todos}/>
+        <TodoInputContainer/>
+        <Todos/>
       </div>
     )
   }

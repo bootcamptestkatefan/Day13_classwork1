@@ -5,7 +5,9 @@ export default class Todos extends Component {
     const {todos} = this.props
     return (
       <div>
-        {todos.map((todo, i) => <li key={i}>{todo}</li>)}
+        {todos.map((todo, i) => <li 
+        
+        key={i}>{todo}</li>)}
       </div>
     )
   }
