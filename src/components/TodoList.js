@@ -5,7 +5,12 @@ import { connect } from "react-redux";
 
 class TodoList extends Component {
     state = {todos: []}
-
+    crossItself = (id) => {
+      this.props.dispatch({
+        type: "CHANGE_STATUS",
+        payload: id
+      });
+    }
     // addNewTodo = newTodo => {
     //   this.props.dispatch({
     //     type: "ADD_NEW_TODO",
@@ -19,7 +24,7 @@ class TodoList extends Component {
       <div>
         <TodoInputContainer/>
         <ul>
-        <Todos todos={this.props.todos}/>
+        <Todos todos={this.props.todos} crossItself={this.crossItself}/>
         </ul>
       </div>
     )

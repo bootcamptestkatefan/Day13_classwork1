@@ -1,0 +1,6 @@
+.inactiveClass {
+    text-decoration: line-through;
+}
+.activeClass {
+    color:black;
+}
