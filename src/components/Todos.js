@@ -10,7 +10,7 @@ export default class Todos extends Component {
     this.props.crossItself(id, status);
   }
   render() {
-    const {props} = this.props
+    //const {props} = this.props
     return (
       <div>
         {this.props.todos.map((todo, i) => 

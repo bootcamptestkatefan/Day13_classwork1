@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { connect } from "react-redux";
+
 
 export default class TodoInput extends Component {
   dispatch = () => {
     const {input} = this.refs
     this.props.addNewTodo(input.value)
     input.value = ''
+  }
+  checkStatusForCheckboxUse = () => {
+    console.log("checkbox")
   }
 
   // addNewTodo = newTodo => {
@@ -20,8 +23,13 @@ export default class TodoInput extends Component {
   render() {
     return (
       <div>
-        <input ref="input"/>
-        <button onClick={this.dispatch}>add</button>
+        <div>
+          <input ref="input"/>
+          <button onClick={this.dispatch}>add</button>
+        </div>
+        <div>
+          <input type="checkbox" onChange={()=>this.checkStatusForCheckboxUse()}/>Delete when words are being crossed
+        </div>
       </div>
     )
   }
