@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./Style.css"
+import "./style.css"
 
 export default class Todos extends Component {
 

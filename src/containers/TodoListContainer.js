@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import { connect } from 'react-redux';
-import TodoInput from '../components/TodoInput.js';
+// import { connect } from 'react-redux';
+// import TodoInput from '../components/TodoInput.js';
 
 
 
-export default connect(null, mapDispatchToProps)(TodoInput)
+// export default connect(null, mapDispatchToProps)(TodoInput)
