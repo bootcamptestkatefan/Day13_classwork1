@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
       }),
       body: JSON.stringify(newTodoItem)
     })
+
     .then(res => res.json())
     .then (({id, status, content}) => {
       dispatch({
